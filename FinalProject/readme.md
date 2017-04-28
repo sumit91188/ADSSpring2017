@@ -290,7 +290,7 @@ seriesCount = dfLastQuote[dfLastQuote['is_changed'] == 0]['customer_ID'].groupby
 columns=['Number of Quotes Reviewed', 'Prediction Accuracy']
 dfSummary1 = pd.DataFrame({'Number of Quotes Reviewed':seriesCount.index,'Prediction Accuracy': seriesCount})
 ```
-![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/EDA2.PNG)
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/EDA2.png)
 
 ### Summarizing data by States
   - Summary of purchases are displayed on the plot using plotly in offline mode.
@@ -298,7 +298,7 @@ dfSummary1 = pd.DataFrame({'Number of Quotes Reviewed':seriesCount.index,'Predic
   - Create a dictionary of the summary and display on the plotly plot.
   - Hover over each state to get the summary.
 
-![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/EDA3.PNG)
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/EDA3.png)
 
 ### Power BI Dashboard
 > [PowerBI Dashboard](https://app.powerbi.com/groups/me/dashboards/4e12d7e1-113c-412b-80a6-b0cab098aaca)
