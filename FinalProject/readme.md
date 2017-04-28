@@ -403,3 +403,29 @@ Based on the below results we have decided to deploy the decision forest regress
 <img src ="extras/screenshots/Azure11.PNG" />
 
 Above experiment for the prediction of cost is deployed as [predict_cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/WebServiceGroups/WebServiceGroup/610c3af7eb98496fa19563b62c296efb/dashboard) API.
+
+## How to use this application
+### pull docker image
+```sh
+docker build -t sumit91188/final .
+```
+
+### run docker image
+```sh
+docker run -d sumit91188/final tail -f /dev/null
+```
+
+### check the container running
+```sh
+docker ps -a
+```
+
+### run the pipeline through container
+```sh
+docker exec -it <container_id> python start_pipeline.py start_task --local-scheduler
+```
+
+### to go inside the container and check results
+```sh
+docker exec -it <container_id> /bin/bash
+```
