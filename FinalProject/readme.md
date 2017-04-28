@@ -228,10 +228,10 @@ In the raw data, we have found that almost in 33% of the rows, 'risk_factor' is 
 We have used Random Forest Multiclass Classifier to classify the Risk Factor.
 
 **Confusion Metric**
-<img src ="extras/screenshots/CF_Risk_Factor.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/CF_Risk_Factor.PNG)
 
 **Accuracy Score**
-<img src ="extras/screenshots/accuracy_Risk_Factor.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/accuracy_Risk_Factor.PNG)
 ```
 def funPredictNFillRiskFactor(df):
     dfrisk = df[~ pd.isnull(df['risk_factor'])]
@@ -255,7 +255,7 @@ def chunker(seq, size):
     return (seq[pos:pos + size] for pos in range(0, len(seq), size))
 ```
 ### Snapshot of cleaned data
-<img src ="extras/screenshots/purchase_data.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/purchase_data.PNG)
 
 
 ---
@@ -278,7 +278,8 @@ seriesCount = dfLastQuote['customer_ID'].groupby(dfLastQuote['shopping_pt']).cou
 columns=['Number of Quotes Reviewed', 'Count of Customers']
 dfSummary = pd.DataFrame({'Number of Quotes Reviewed':seriesCount.index,'Count of Customers': seriesCount})
 ```
-<img src ="extras/screenshots/EDA1.PNG" />
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/EDA1.PNG)
 
 ### Predictive power of final quote before purchase
 As seen in the plot below, the final quote a customer requests before the "purchase point" is hugely predictive of which options they will actually purchase. The final quote correctly predicted the purchased options 50% to 75% of the time, with that percentage steadily increasing as customers review more quotes. This proves that customer continues to take quotes unless and until, he is 100% satisfied with the coverages & cost.
@@ -289,7 +290,7 @@ seriesCount = dfLastQuote[dfLastQuote['is_changed'] == 0]['customer_ID'].groupby
 columns=['Number of Quotes Reviewed', 'Prediction Accuracy']
 dfSummary1 = pd.DataFrame({'Number of Quotes Reviewed':seriesCount.index,'Prediction Accuracy': seriesCount})
 ```
-<img src ="extras/screenshots/EDA2.png" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/EDA2.PNG)
 
 ### Summarizing data by States
   - Summary of purchases are displayed on the plot using plotly in offline mode.
@@ -297,7 +298,7 @@ dfSummary1 = pd.DataFrame({'Number of Quotes Reviewed':seriesCount.index,'Predic
   - Create a dictionary of the summary and display on the plotly plot.
   - Hover over each state to get the summary.
 
-<img src ="extras/screenshots/EDA3.png" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/EDA3.PNG)
 
 ### Power BI Dashboard
 > [PowerBI Dashboard](https://app.powerbi.com/groups/me/dashboards/4e12d7e1-113c-412b-80a6-b0cab098aaca)
@@ -305,29 +306,29 @@ dfSummary1 = pd.DataFrame({'Number of Quotes Reviewed':seriesCount.index,'Predic
 
 Allstate Auto insurance agent posts several quotes to the users before user agreeing on one quote. Our objective is to reduce the number of quotes to minimum to save customer’s time and increase customer satisfaction. Below, we have visualized users’ shopping point (a number that indicates how many quotes does a common user go through) before making a decision. As we can see, majority of the users have taken from 6-8 turns before deciding on a quote. Our application aims a minimizing these turns so that we can come up with an optimal quote that the user.
 
-<img src ="extras/screenshots/snap1.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/snap1.PNG)
 
 **Popular plans and frequency Analysis**
 We have ranked the plans based on the number of sales by customers. Most popular plan is 1133123 with a count of 59 followed by others. On the right-hand side, we have analyzed the shopping frequency of each plan and found out highest percentage of people 32.20 % choose that plan on the first go. That sums up our application objective well.
 
-<img src ="extras/screenshots/snap2.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/snap2.PNG)
 
 **Correlation Analysis between Different Plans**
 We have calculated the correlation between different insurance plans and found out some to be highly correlative. Below is the correlation analysis for most correlated plan C and D. Below bar chart explains if a user goes for Plan C type.
 
-<img src ="extras/screenshots/snap3.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/snap3.PNG)
 
 We have also analyzed other plans like Plans A and D, B and E and found them to be highly correlated. As we can see above, if customer is take Plan A Type 1 then he has opted for Plan F type 2. Out of 2 million customers 1.9 have went for the same plan. That proves our assumption to be correct.
 
 **Insurance cost and Risk Factor using Age distribution**
 We have divided the users age data in different bins and analyzed the average insurance cost and risk factor. We have figured out that the average risk score has fallen as the age group increases that gives an idea how younger aged people tends to have higher risk score as compared to adults. The 20’s age group has the highest average risk score 2.89. Even the average insurance cost is a bit on the higher side for the younger people with $647 as compared to adults with $630 average score.
 
-<img src ="extras/screenshots/snap4.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/snap4.PNG)
 
 **Risk Factor and Car Age distribution analysis**
 Below line chart explains the trend on how the risk factor increases with the car age. X-axis represents the Car Age bin whereas the y-axis represent the risk factor. Risk factor is minimum where the car age is 1 year and it goes on increasing till it reaches max of 2.92 when the car age is 15 years. This shows a trend how risk factor is directly related to the car age.
 
-<img src ="extras/screenshots/snap5.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/snap5.PNG)
 
 ---
 
@@ -344,19 +345,19 @@ Below line chart explains the trend on how the risk factor increases with the ca
 [Stage_Classify_Risk_Factor](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.b58dc05493ac4aa59038079aa4c2f32d/ViewExperiment) is a staginng experiment to find out the best model for the classification.
 We have compared the Multiclass Neural Network, Multiclass Decision Jungle & Multiclass Decision Forest for the risk factor classification.
 
-<img src ="extras/screenshots/Azure1.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure1.PNG)
 
 Based on the below results we have decided to deploy the Random Forest model and create an API.
 
-<img src ="extras/screenshots/Azure2.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure2.PNG)
 
-<img src ="extras/screenshots/Azure3.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure3.PNG)
 
 **Deployment**
 
 [Classify_Risk_Factor](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.b58dc05493ac4aa59038079aa4c2f32d/ViewExperiment) is a Random Forest model to classify the Risk Factor.
 
-<img src ="extras/screenshots/Azure4.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure4.PNG)
 
 Above experiment we have deployed as an [Classify_Risk_Factor](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/WebServiceGroups/WebServiceGroup/e2ed8cc7f7514f00acadf06c57aba7a8/dashboard) API.
 
@@ -366,19 +367,19 @@ Above experiment we have deployed as an [Classify_Risk_Factor](https://studio.az
 [Stage_Classify_A](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.54c9eb809f2345beb9abb0009250f326/ViewExperiment) is a staginng experiment to find out the best model for the classification of coverage A.
 We have compared the Multiclass Neural Network, Multiclass Decision Jungle & Multiclass Decision Forest for the risk factor classification.
 
-<img src ="extras/screenshots/Azure5.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure5.PNG)
 
 Based on the below results we have decided to deploy the Multiclass decision jungle and create an API.
 
-<img src ="extras/screenshots/Azure6.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure6.PNG)
 
-<img src ="extras/screenshots/Azure7.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure7.PNG)
 
 **Deployment**
 
 [Classify_A](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.c362c8a5926e4bcbb5779a255264545d/ViewExperiment) is a Multiclass Descision Jungle model to classify the Risk Factor.
 
-<img src ="extras/screenshots/Azure8.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure8.PNG)
 
 > Similarly we have deployed all the models for the coverages B-G.
 
@@ -390,17 +391,17 @@ All the above experiments for coverages A to G are deployed in only one [first_q
 [Stage_Predict_Cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.23bc533b01f9444ea9e41b2069457583/ViewExperiment) is a staging experiment to find out the best model for the prediction of cost.
 We have compared the Neural Network, Linear Regression & Decision Forest for the cost regression.
 
-<img src ="extras/screenshots/Azure9.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure9.PNG)
 
 Based on the below results we have decided to deploy the decision forest regression and create an API.
 
-<img src ="extras/screenshots/Azure10.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure10.PNG)
 
 **Deployment**
 
 [predict_cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.03b71eda4fd1416490aa7146d71e6a41/ViewExperiment) is a Decision Forest Regression model to predict the cost.
 
-<img src ="extras/screenshots/Azure11.PNG" />
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Azure11.PNG)
 
 Above experiment for the prediction of cost is deployed as [predict_cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/WebServiceGroups/WebServiceGroup/610c3af7eb98496fa19563b62c296efb/dashboard) API.
 
