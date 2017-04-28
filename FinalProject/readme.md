@@ -157,7 +157,7 @@ def output(self):
 username = input("Please provide username : ")
 password = input("Please provide password : ")
 ```
-[![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/login.PNG)]
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/login.PNG)
 
 ### Loging to the site
 ```
