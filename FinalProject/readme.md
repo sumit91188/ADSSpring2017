@@ -39,20 +39,20 @@ Each product has 7 customizable options selected by customers, each with 2, 3, o
 
 ---
 # Goal of the project
-If the eventual purchase can be predicted sooner in the shopping window, the quoting process is shortened and the issuer is less likely to lose the customer's business.This application is likely be applied to any business in which customers are deciding between multiple products (or multiple options for the same product). If the business can gain an insight into which product or option a customer is likely to end up choosing, they could nudge the customer toward that product (in order to increase their conversion rate), or instead nudge the customer toward a slightly more expensive product (in order to maximize their profit from that sale).
-* **Dockerizing an application** - [Docker File](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/Data%20Download.ipynb) describes the step by step implementation of creating an docker image.
-* **Pipelining tasks** - [Start-Pipeline](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/Data%20Download.ipynb) uses Luigi to pipelining the tasks.
-* **Data Download** - [Data-download](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/Data%20Download.ipynb) describes the step by step implementation of downloading the dataset provided on the kaggle.com.
-* **Data Wrangling & Preprocessing** - [Clean Data Script](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/Data%20Download.ipynb) describe the step by step process to clean and seperate the data into 3 different files for purchases, quotes & last quotes.
-* **Exploratory data analysis** - [EDA Notebook](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/analysis/ana_1.ipynb) performs Exploratory data analysis on the purchases and quotes.
-Data scientist view of [Power BI dashboard](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/analysis/ana_1.ipynb) to illustrate your key insights.
+If the eventual purchase can be predicted sooner in the shopping window, the quoting process is shortened and the issuer is less likely to lose the customer's business. This application is likely be applied to any business in which customers are deciding between multiple products (or multiple options for the same product). If the business can gain an insight into which product or option a customer is likely to end up choosing, they could nudge the customer toward that product (in order to increase their conversion rate), or instead nudge the customer toward a slightly more expensive product (in order to maximize their profit from that sale).
+* **Dockerizing an application** - [Docker File](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/Dockerfile) describes the step by step implementation of creating an docker image.
+* **Pipelining tasks** - [Start-Pipeline](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/start_pipeline.py) uses Luigi to pipelining the tasks.
+* **Data Download** - [Data-download](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/download_data.py) describes the step by step implementation of downloading the dataset provided on the kaggle.com.
+* **Data Wrangling & Preprocessing** - [Clean Data Script](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/clean_data.py) describe the step by step process to clean and separate the data into 3 different files for purchases, quotes & last quotes.
+* **Exploratory data analysis** - [EDA Notebook](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/EDA.ipynb) performs Exploratory data analysis on the purchases and quotes.
+Data scientist view of [Power BI dashboard](https://app.powerbi.com/groups/me/dashboards/4e12d7e1-113c-412b-80a6-b0cab098aaca) to illustrate your key insights.
 * **Classification Of Coverages** - Classify all the 7 coverages based on the customer's profile.
 * **Predicting Cost** - Based on the possible coverages and customer's profile, predict the cost, customer is likely to pay.
-* **Create a WebApp for user-interaction** - [Allstate Insurance](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/analysis/ana_1.ipynb) webapp takes the inputes from a customer and provides the best possible quote, with the option of customizing it.
+* **Create a WebApp for user-interaction** - [Allstate Insurance](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/analysis/ana_1.ipynb) webapp takes the inputs from a customer and provides the best possible quote, with the option of customizing it.
 
 ---
 ## Docker File
-[Docker File](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/Data%20Download.ipynb) has following dependency.
+[Docker File](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/Dockerfile) has following dependency.
 ```sh
 FROM python
 RUN apt-get update && \
@@ -81,7 +81,7 @@ ADD download_data.py download_data.py
 ADD start_pipeline.py start_pipeline.py
 ```
 ## Luigi Pipeline
-[Start Pipeline Script](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/Data%20Download.ipynb) description.
+[Start Pipeline Script](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/start_pipeline.py) description.
 ### Start Task
 **Task Requirement**
 ```
@@ -151,7 +151,7 @@ def output(self):
 ```
 
 ## Data Download
-[Data-download Script](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/Data%20Download.ipynb) description.
+[Data-download Script](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/download_data.py) description.
 ### Get login credentials
 ```
 username = input("Please provide username : ")
@@ -186,7 +186,7 @@ with urlopen(baseURL + extn) as zipresp:
 ---
 
 ## Data Wrangling & Preprocessing
-[Clean Data Script](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/Data%20Download.ipynb) description.
+[Clean Data Script](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/clean_data.py) description.
 ### Fill missing data
 Below function will fill all the NaNs with some default values.
 ```
@@ -261,7 +261,7 @@ def chunker(seq, size):
 
 ## Exploratory data analysis
 ### Installation
-[EDA Notebook](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/analysis/ana_1.ipynb) has following dependency.
+[EDA Notebook](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/EDA.ipynb) has following dependency.
 
 ```sh
 $ pip install pandas
@@ -299,10 +299,34 @@ dfSummary1 = pd.DataFrame({'Number of Quotes Reviewed':seriesCount.index,'Predic
 <img src ="extras/screenshots/EDA3.png" />
 
 ### Power BI Dashboard
-> Loan Data Summary
+> [PowerBI Dashboard](https://app.powerbi.com/groups/me/dashboards/4e12d7e1-113c-412b-80a6-b0cab098aaca)
 
 
-<img src ="extras/screenshots/NumberOfLoansByYear.PNG" />
+Allstate Auto insurance agent posts several quotes to the users before user agreeing on one quote. Our objective is to reduce the number of quotes to minimum to save customer’s time and increase customer satisfaction. Below, we have visualized users’ shopping point (a number that indicates how many quotes does a common user go through) before making a decision. As we can see, majority of the users have taken from 6-8 turns before deciding on a quote. Our application aims a minimizing these turns so that we can come up with an optimal quote that the user.
+
+<img src ="extras/screenshots/snap1.PNG" />
+
+**Popular plans and frequency Analysis**
+We have ranked the plans based on the number of sales by customers. Most popular plan is 1133123 with a count of 59 followed by others. On the right-hand side, we have analyzed the shopping frequency of each plan and found out highest percentage of people 32.20 % choose that plan on the first go. That sums up our application objective well.
+
+<img src ="extras/screenshots/snap2.PNG" />
+
+**Correlation Analysis between Different Plans**
+We have calculated the correlation between different insurance plans and found out some to be highly correlative. Below is the correlation analysis for most correlated plan C and D. Below bar chart explains if a user goes for Plan C type.
+
+<img src ="extras/screenshots/snap3.PNG" />
+
+We have also analyzed other plans like Plans A and D, B and E and found them to be highly correlated. As we can see above, if customer is take Plan A Type 1 then he has opted for Plan F type 2. Out of 2 million customers 1.9 have went for the same plan. That proves our assumption to be correct.
+
+**Insurance cost and Risk Factor using Age distribution**
+We have divided the users age data in different bins and analyzed the average insurance cost and risk factor. We have figured out that the average risk score has fallen as the age group increases that gives an idea how younger aged people tends to have higher risk score as compared to adults. The 20’s age group has the highest average risk score 2.89. Even the average insurance cost is a bit on the higher side for the younger people with $647 as compared to adults with $630 average score.
+
+<img src ="extras/screenshots/snap4.PNG" />
+
+**Risk Factor and Car Age distribution analysis**
+Below line chart explains the trend on how the risk factor increases with the car age. X-axis represents the Car Age bin whereas the y-axis represent the risk factor. Risk factor is minimum where the car age is 1 year and it goes on increasing till it reaches max of 2.92 when the car age is 15 years. This shows a trend how risk factor is directly related to the car age.
+
+<img src ="extras/screenshots/snap5.PNG" />
 
 ---
 
