@@ -217,15 +217,16 @@ def funChangeDataTypes(df):
     df['car_value_code'] = df['car_value'].astype('category')
     df['car_value_code'] = df['car_value_code'].cat.codes
 
-    columns = #columns to be channged
+    columns = #columns to be changed
 
     for col in columns:
         df[col] = df[col].astype('category')
     return df
 ```
 ### Predict Risk Factor
-In the raw data,we have found that almost in 33% of the rows, 'risk_factor' is missing. After carefully looking into the data, we came to the connclusion that,  instaed of filling these NaN by mean/max/min, we can predict it with the help of other available features.
+In the raw data, we have found that almost in 33% of the rows, 'risk_factor' is missing. After carefully looking into the data, we came to the conclusion that,  instead of filling these NaN by mean/max/min, we can predict it with the help of other available features.
 We have used Random Forest Multiclass Classifier to classify the Risk Factor.
+
 **Confusion Metric**
 <img src ="extras/screenshots/CF_Risk_Factor.PNG" />
 
@@ -280,7 +281,7 @@ dfSummary = pd.DataFrame({'Number of Quotes Reviewed':seriesCount.index,'Count o
 <img src ="extras/screenshots/EDA1.PNG" />
 
 ### Predictive power of final quote before purchase
-As seen in the plot below, the final quote a customer requests before the "purchase point" is hugely predictive of which options they will actually purchase. The final quote correctly predicted the purchased options 50% to 75% of the time, with that percentage steadily increasing as customers review more quotes. This proves that customer continues to take quotes unless and untill, he is 100% satisfied with the coverages & cost.
+As seen in the plot below, the final quote a customer requests before the "purchase point" is hugely predictive of which options they will actually purchase. The final quote correctly predicted the purchased options 50% to 75% of the time, with that percentage steadily increasing as customers review more quotes. This proves that customer continues to take quotes unless and until, he is 100% satisfied with the coverages & cost.
 ```
 #by shopping_pt and counting the total number of records
 # df = dfLastQuote[dfLastQuote['is_changed'] == 0]
@@ -341,7 +342,7 @@ Below line chart explains the trend on how the risk factor increases with the ca
 **Staging**
 
 [Stage_Classify_Risk_Factor](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.b58dc05493ac4aa59038079aa4c2f32d/ViewExperiment) is a staginng experiment to find out the best model for the classification.
-We have compared the Multiclass Neural Network, Multiclass Descision Jungle & Multiclass Descision Forest for the risk factor classification.
+We have compared the Multiclass Neural Network, Multiclass Decision Jungle & Multiclass Decision Forest for the risk factor classification.
 
 <img src ="extras/screenshots/Azure1.PNG" />
 
@@ -363,11 +364,11 @@ Above experiment we have deployed as an [Classify_Risk_Factor](https://studio.az
 **Staging**
 
 [Stage_Classify_A](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.54c9eb809f2345beb9abb0009250f326/ViewExperiment) is a staginng experiment to find out the best model for the classification of coverage A.
-We have compared the Multiclass Neural Network, Multiclass Descision Jungle & Multiclass Descision Forest for the risk factor classification.
+We have compared the Multiclass Neural Network, Multiclass Decision Jungle & Multiclass Decision Forest for the risk factor classification.
 
 <img src ="extras/screenshots/Azure5.PNG" />
 
-Based on the below results we have decided to deploy the Multiclass descision jungle and create an API.
+Based on the below results we have decided to deploy the Multiclass decision jungle and create an API.
 
 <img src ="extras/screenshots/Azure6.PNG" />
 
@@ -386,18 +387,18 @@ All the above experiments for coverages A to G are deployed in only one [first_q
 ### Predict Cost
 **Staging**
 
-[Stage_Predict_Cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.23bc533b01f9444ea9e41b2069457583/ViewExperiment) is a staginng experiment to find out the best model for the prediction of cost.
-We have compared the Neural Network, Linear Regression & Descision Forest for the cost regression.
+[Stage_Predict_Cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.23bc533b01f9444ea9e41b2069457583/ViewExperiment) is a staging experiment to find out the best model for the prediction of cost.
+We have compared the Neural Network, Linear Regression & Decision Forest for the cost regression.
 
 <img src ="extras/screenshots/Azure9.PNG" />
 
-Based on the below results we have decided to deploy the descision forest regression and create an API.
+Based on the below results we have decided to deploy the decision forest regression and create an API.
 
 <img src ="extras/screenshots/Azure10.PNG" />
 
 **Deployment**
 
-[predict_cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.03b71eda4fd1416490aa7146d71e6a41/ViewExperiment) is a Descision Forest Regression model to predict the cost.
+[predict_cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/Experiments/Experiment/ae308c93a0db4b72bf3db66d7dd8ec34.f-id.03b71eda4fd1416490aa7146d71e6a41/ViewExperiment) is a Decision Forest Regression model to predict the cost.
 
 <img src ="extras/screenshots/Azure11.PNG" />
 
