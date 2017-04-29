@@ -48,7 +48,7 @@ If the eventual purchase can be predicted sooner in the shopping window, the quo
 Data scientist view of [Power BI dashboard](https://app.powerbi.com/groups/me/dashboards/4e12d7e1-113c-412b-80a6-b0cab098aaca) to illustrate your key insights.
 * **Classification Of Coverages** - Classify all the 7 coverages based on the customer's profile.
 * **Predicting Cost** - Based on the possible coverages and customer's profile, predict the cost, customer is likely to pay.
-* **Create a WebApp for user-interaction** - [Allstate Insurance](https://github.com/sumit91188/deo_sumit_spring2017/blob/master/Final/analysis/ana_1.ipynb) webapp takes the inputs from a customer and provides the best possible quote, with the option of customizing it.
+* **Create a WebApp for user-interaction** - [Allstate Insurance](http://allstateapplication.azurewebsites.net/) webapp takes the inputs from a customer and provides the best possible quote, with the option of customizing it.
 
 ---
 ## Docker File
