@@ -422,7 +422,7 @@ Above experiment for the prediction of cost is deployed as [predict_cost](https:
 
 ### Application Process
 
-![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Webappflow.PNG)
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/WebAppFlow.PNG)
 
 
 ### Back End logic – Predicting Plan and Cost
@@ -440,11 +440,11 @@ Above experiment for the prediction of cost is deployed as [predict_cost](https:
 ### PUBLISHING TO AZURE WEB SERVICE
 >Create App service and resource group
 
-![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/publish1.PNG)
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Publish1.PNG)
 
 >Publish the Application on Azure to create a web service
 
-![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/publish2.PNG)
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Publish2.PNG)
 
 ---
 
