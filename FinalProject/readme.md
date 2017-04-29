@@ -475,6 +475,10 @@ docker exec -it <container_id> python start_pipeline.py start_task --local-sched
 docker exec -it <container_id> /bin/bash
 ```
 
+>After successful completion of all the jobs, the clean data will be available on the AWS.
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/aws.PNG)
+
 ---
 
 ## How to use Allstate WebApp
@@ -495,5 +499,8 @@ Each Coverage can be either 1, 2, 3 or 4. We are assuming these numbers are diff
 
 >This page shows lets the customer select a customized plan and shows the comparison between costs for the suggested plan as well as the customized plan
 
+
+## Contribution
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Contribution.png)
 
 ---
