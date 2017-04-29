@@ -405,7 +405,51 @@ Based on the below results we have decided to deploy the decision forest regress
 
 Above experiment for the prediction of cost is deployed as [predict_cost](https://studio.azureml.net/Home/ViewWorkspaceCached/ae308c93a0db4b72bf3db66d7dd8ec34#Workspaces/WebServiceGroups/WebServiceGroup/610c3af7eb98496fa19563b62c296efb/dashboard) API.
 
-## How to use this application
+
+---
+
+
+## Allstate WebApp
+
+>Here is the [link](http://allstateapplication.azurewebsites.net/) to the Allstate Insurance Quotes WebApp.
+
+### Technologies Used
+
+>Language Used: ASP.NET, C#, CSS, HTML, JQUERY
+>IDE: Visual Studio 2017
+>DEPLOYMENT PLATFORM: AZURE WEB SERVICES
+>Web Site Link : http://allstateapplication.azurewebsites.net/
+
+### Application Process
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Webappflow.PNG)
+
+
+### Back End logic – Predicting Plan and Cost
+- We Created a Web page to gather user information in asp.net
+- Calling the REST API
+1. Define the api key
+2. Define the base address for rest api
+3. Get response
+- The API call gives us values of the 7 coverages, cost of the entire plan and probabilities for each of the coverages
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Code1.PNG)
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/Code2.PNG)
+
+### PUBLISHING TO AZURE WEB SERVICE
+>Create App service and resource group
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/publish1.PNG)
+
+>Publish the Application on Azure to create a web service
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/publish2.PNG)
+
+---
+
+
+## How to use docker image
 ### pull docker image
 ```sh
 docker build -t sumit91188/final .
@@ -430,3 +474,26 @@ docker exec -it <container_id> python start_pipeline.py start_task --local-sched
 ```sh
 docker exec -it <container_id> /bin/bash
 ```
+
+---
+
+## How to use Allstate WebApp
+
+>[Click here](http://allstateapplication.azurewebsites.net/) to go to the Allstate Insurance Quotes WebApp.
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/AllStatePage1.PNG)
+
+>Enter the user details and click on submit.
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/AllStatePage2.PNG)
+
+
+>Click on Not Satisfied to Customize your policy and Select from the given Coverages that All State offers to its customers.
+Each Coverage can be either 1, 2, 3 or 4. We are assuming these numbers are different levels/types of coverage offered by All State.
+
+![N|Solid](https://github.com/sumit91188/ADSSpring2017/blob/master/FinalProject/extras/screenshots/AllStatePage3.PNG)
+
+>This page shows lets the customer select a customized plan and shows the comparison between costs for the suggested plan as well as the customized plan
+
+
+---
